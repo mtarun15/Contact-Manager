@@ -10,19 +10,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
         <Header branding = "Contact Manager"/>
-        <Contact 
-        name = "Tarun Manchukonda"
-        email ="xyz@gmail.com" 
-        phone= "9876543201" 
-        />
-        <Contact 
-        name = "Mounika Sharma"
-        email ="ms@gmail.com" 
-        phone= "9865832147" 
-        />
-      </div>
+        <div className="container">
+          <Contact 
+            name = "Tarun Manchukonda"
+            email ="xyz@gmail.com" 
+            phone= "9876543201" 
+          />
+          <Contact 
+            name = "Mounika Sharma"
+            email ="ms@gmail.com" 
+            phone= "9865832147" 
+          />
+        </div>
+       </div>
     );
   }
 }
