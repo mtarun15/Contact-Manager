@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+
 
 class Contact extends Component {
   render() {
@@ -7,12 +9,18 @@ class Contact extends Component {
       <div>
         <h4>{name}</h4>
         <ul>
-            <li> {email}</li>
-            <li>{phone}</li>
+            <li>Email: {email}</li>
+            <li>Phone: {phone}</li>
         </ul>
       </div>
     );
   }
 }
+
+Contact.propTypes = {
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+};
 
 export default Contact;
