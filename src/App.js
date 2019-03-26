@@ -11,13 +11,13 @@ class App extends Component {
         <Header branding = "Contact Manager"/>
         <Contact 
         name = "Tarun Manchukonda"
-        email ="xxx@gmail.com" 
-        phone= "987654321" 
+        email ="xyz@gmail.com" 
+        phone= "9876543201" 
         />
         <Contact 
         name = "Mounika Sharma"
         email ="ms@gmail.com" 
-        phone= "986532147" 
+        phone= "9865832147" 
         />
       </div>
     );
