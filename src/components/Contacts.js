@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Contact from './Contact'
+
 class Contacts extends Component {
-    
-    state={
+        state={
             contacts: [
                 {
                     id: 1,
@@ -18,16 +18,23 @@ class Contacts extends Component {
                 },
                 {
                     id: 3,
-                    name: 'Pratyusha',
+                    name:  'Kalyan',
                     email: 'pk@gmail.com',
                     phone: '9563014587'
                 },
             ]
         };
 
-    onDeleteClick = () => {
-        this.props.deleteClickHandler();
-    }
+    deleteContact = id => {
+        const { contacts } = this.state;
+
+        const newContacts = contacts.filter(contact => 
+            contact.id !== id);
+
+            this.setState({
+                contacts: newContacts
+            });
+    };
     
   render() {
       const { contacts } = this.state;
@@ -37,7 +44,8 @@ class Contacts extends Component {
             <Contact 
                 key={contact.id}
                 contact={contact} 
-                  deleteClickHandler= {this.deleteContact} />
+                  deleteClickHandler= {this.deleteContact.bind(this,
+                    contact.id)} />
         ))}
       </React.Fragment>
     )
